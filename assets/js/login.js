@@ -39,7 +39,7 @@ $(function() {
         e.preventDefault()
             // 2. 发起Ajax的POST请求
         var data = { username: $('#form_reg [name=username]').val(), password: $('#form_reg [name=password]').val() }
-        $.post('http://api-breakingnews-web.itheima.net/api/reguser', data, function(res) {
+        $.post('/api/reguser', data, function(res) {
             if (res.status !== 0) {
                 return layer.msg(res.message)
             }
